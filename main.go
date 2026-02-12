@@ -182,6 +182,7 @@
 package main
 
 import (
+	"quickstart/config"
 	"quickstart/routes"
 
 	"github.com/gin-gonic/gin"
@@ -190,6 +191,8 @@ import (
 //first middleware
 
 	func main(){
+		//connect to database
+		config.ConnectDatabase()
 		r:=gin.New()//default middleware logger and recovery
 
 
